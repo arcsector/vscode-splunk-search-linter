@@ -1,0 +1,32 @@
+Command_Name,Supported functions and syntax,Description,Type of function
+avg,avg(X),Returns the average of the values in the field X.,Aggregate functions
+count,count(X),"Returns the number of occurrences where the field that you specify contains any value (is not empty. You can also count the occurrences of a specific value in the field by using the eval command with the count function. For example: count eval(field_name=""value"").",Aggregate functions
+distinct_count,distinct_count(X),Returns the count of distinct values in the field X.,Aggregate functions
+estdc,estdc(X),Returns the estimated count of the distinct values in the field X.,Aggregate functions
+estdc_error,estdc_error(X),Returns the theoretical error of the estimated count of the distinct values in the field X. The error represents a ratio of the absolute_value(estimate_distinct_count - real_distinct_count)/real_distinct_count.,Aggregate functions
+max,max(X),"Returns the maximum value of the field X. If the values of X are non-numeric, the maximum value is found using lexicographical ordering. This function processes field values as numbers if possible, otherwise processes field values as strings.",Aggregate functions
+mean,mean(X),Returns the arithmetic mean of the field X.,Aggregate functions
+median,median(X),Returns the middle-most value of the field X.,Aggregate functions
+min,min(X),"Returns the minimum value of the field X. If the values of X are non-numeric, the minimum value is found using lexicographical ordering.",Aggregate functions
+mode,mode(X),Returns the most frequent value of the field X.,Aggregate functions
+percentile,percentile<X>(Y),Returns the X-th percentile value of the numeric field Y. Valid values of X are integers from 1 to 99.,Aggregate functions
+range,range(X),Returns the difference between the maximum and minimum values of the field X ONLY IF the values of X are numeric.,Aggregate functions
+stdev,stdev(X),Returns the sample standard deviation of the field X.,Aggregate functions
+stdevp,stdevp(X),Returns the population standard deviation of the field X.,Aggregate functions
+sum,sum(X),Returns the sum of the values of the field X.,Aggregate functions
+sumsq,sumsq(X),Returns the sum of the squares of the values of the field X.,Aggregate functions
+var,var(X),Returns the sample variance of the field X.,Aggregate functions
+varp,varp(X),Returns the population variance of the field X.,Aggregate functions
+first,first(X),"Returns the first seen value of the field X. In general, the first seen value of the field is the most recent instance of this field, relative to the input order of events into the stats command.",Event order functions
+last,last(X),"Returns the last seen value of the field X. In general, the last seen value of the field is the oldest instance of this field relative to the input order of events into the stats command.",Event order functions
+list,list(X),Returns a list of up to 100 values of the field X as a multivalue entry. The order of the values reflects the order of input events.,Multivalue stats and chart functions
+values,values(X),Returns the list of all distinct values of the field X as a multivalue entry. The order of the values is lexicographical.,Multivalue stats and chart functions
+earliest,earliest(X),Returns the chronologically earliest (oldest) seen occurrence of a value of a field X.,Time functions
+earliest_time,earliest_time(X),"Returns the UNIX time of the earliest (oldest) occurrence of a value of the field. Used in conjunction with earliest(x), latest(x), and latest_time(x) to calculate the rate of increase for an accumulating counter.",Time functions
+latest,latest(X),Returns the chronologically latest (most recent) seen occurrence of a value of a field X.,Time functions
+latest_time,latest_time(X),"Returns the UNIX time of the latest (most recent) occurrence of a value of the field. Used in conjunction with earliest(x), earliest_time(x), and latest(x) to calculate the rate of increase for an accumulating counter.",Time functions
+per_day,per_day(X),"Returns the values of field X, or eval expression X, for each day.",Time functions
+per_hour,per_hour(X),"Returns the values of field X, or eval expression X, for each hour.",Time functions
+per_minute,per_minute(X),"Returns the values of field X, or eval expression X, for each minute.",Time functions
+per_second,per_second(X),"Returns the values of field X, or eval expression X, for each second.",Time functions
+rate,rate(X),"Returns the per-second rate change of the value of the field. Represents (latest(X) - earliest(X)) / (latest_time(X) - earliest_time(X)) Requires the earliest(X) and latest(X) values of the field to be numerical, and the earliest_time(X) and latest_time(X) values to be different.",Time functions

@@ -1,0 +1,143 @@
+Command_Name,Description
+abstract,Produces a summary of each search result.
+accum,Keeps a running total of the specified numeric field.
+addcoltotals,Computes an event that contains sum of all numeric fields for previous events.
+addinfo,Add fields that contain common information about the current search.
+addtotals,Computes the sum of all numeric fields for each result.
+analyzefields,Analyze numerical fields for their ability to predict another discrete field.
+anomalies,"Computes an ""unexpectedness"" score for an event."
+anomalousvalue,"Finds and summarizes irregular, or uncommon, search results."
+anomalydetection,Identifies anomalous events by computing a probability for each event and then detecting unusually small probabilities.
+append,Appends subsearch results to current results.
+appendcols,"Appends the fields of the subsearch results to current results, first results to first result, second to second, etc."
+appendpipe,Appends the result of the subpipeline applied to the current result set to results.
+arules,Finds association rules between field values.
+associate,Identifies correlations between fields.
+audit,Returns audit trail information that is stored in the local audit index.
+autoregress,Sets up data for calculating the moving average.
+bin (bucket),Puts continuous numerical values into discrete sets.
+bucketdir,"Replaces a field value with higher-level grouping, such as replacing filenames with directories."
+chart,"Returns results in a tabular output for charting. See also, Statistical and charting functions."
+cluster,Clusters similar events together.
+cofilter,Finds how many times field1 and field2 values occurred together.
+collect,Puts search results into a summary index.
+concurrency,"Uses a duration field to find the number of ""concurrent"" events for each event."
+contingency,Builds a contingency table for two fields.
+convert,Converts field values into numerical values.
+correlate,Calculates the correlation between different fields.
+datamodel,Examine data model or data model dataset and search a data model dataset.
+dbinspect,Returns information about the specified index.
+dedup,Removes subsequent results that match a specified criteria.
+delete,Delete specific events or search results.
+delta,Computes the difference in field value between nearby results.
+diff,Returns the difference between two search results.
+erex,Allows you to specify example or counter example values to automatically extract fields that have similar values.
+eval,"Calculates an expression and puts the value into a field. See also, Evaluation functions."
+eventcount,Returns the number of events in an index.
+eventstats,Adds summary statistics to all search results.
+extract (kv),Extracts field-value pairs from search results.
+fieldformat,Expresses how to render a field at output time without changing the underlying value.
+fields,Removes fields from search results.
+fieldsummary,Generates summary information for all or a subset of the fields.
+filldown,Replaces NULL values with the last non-NULL value.
+fillnull,Replaces null values with a specified value.
+findtypes,Generates a list of suggested event types.
+folderize,"Creates a higher-level grouping, such as replacing filenames with directories."
+foreach,Run a templatized streaming subsearch for each field in a wildcarded field list.
+format,Takes the results of a subsearch and formats them into a single result.
+from,"Retrieves data from a dataset, such as a data model dataset, a CSV lookup, a KV Store lookup, a saved search, or a table dataset."
+gauge,Transforms results into a format suitable for display by the Gauge chart types.
+gentimes,Generates time-range results.
+geom,"Adds a field, named ""geom"", to each event. This field contains geographic data structures for polygon geometry in JSON and is used for the choropleth map visualization."
+geomfilter,Accepts two points that specify a bounding box for clipping a choropleth map. Points that fall outside of the bounding box are filtered out.
+geostats,Generate statistics which are clustered into geographical bins to be rendered on a world map.
+head,Returns the first number n of specified results.
+highlight,Highlights the specified terms.
+history,Returns a history of searches formatted as an events list or as a table.
+iconify,Displays a unique icon for each different value in the list of fields that you specify.
+input,Add or disable sources.
+inputcsv,Loads search results from the specified CSV file.
+inputlookup,Loads search results from a specified static lookup table.
+iplocation,Extracts location information from IP addresses.
+join,Combine the results of a subsearch with the results of a main search.
+kmeans,Performs k-means clustering on selected fields.
+kvform,"Extracts values from search results, using a form template."
+loadjob,Loads events or results of a previously completed search job.
+localize,Returns a list of the time ranges in which the search results were found.
+localop,"Run subsequent commands, that is all commands following this, locally and not on remote peers."
+lookup,Explicitly invokes field value lookups.
+makecontinuous,Makes a field that is supposed to be the x-axis continuous (invoked by chart/timechart)
+makemv,Change a specified field into a multivalued field during a search.
+makeresults,Creates a specified number of empty search results.
+map,"A looping operator, performs a search over each search result."
+mcollect,Converts search results into metric data and inserts the data into a metric index on the search head.
+metadata,"Returns a list of source, sourcetypes, or hosts from a specified index or distributed search peer."
+metasearch,Retrieves event metadata from indexes based on terms in the logical expression.
+meventcollect,Converts search results into metric data and inserts the data into a metric index on the indexers.
+mstats,"Calculates statistics for the measurement, metric_name, and dimension fields in metric indexes."
+multikv,Extracts field-values from table-formatted events.
+multisearch,Run multiple streaming searches at the same time.
+mvcombine,Combines events in search results that have a single differing field value into one result with a multivalue field of the differing field.
+mvexpand,Expands the values of a multivalue field into separate events for each value of the multivalue field.
+nomv,Changes a specified multivalued field into a single-value field at search time.
+outlier,Removes outlying numerical values.
+outputcsv,Outputs search results to a specified CSV file.
+outputlookup,Writes search results to the specified static lookup table.
+outputtext,Outputs the raw text field (_raw) of results into the _xml field.
+overlap,Finds events in a summary index that overlap in time or have missed events.
+pivot,Run pivot searches against a particular data model dataset.
+predict,Enables you to use time series algorithms to predict future values of fields.
+rangemap,Sets RANGE field to the name of the ranges that match.
+rare,Displays the least common values of a field.
+regex,Removes results that do not match the specified regular expression.
+relevancy,Calculates how well the event matches the query.
+reltime,"Converts the difference between 'now' and '_time' to a human-readable value and adds adds this value to the field, 'reltime', in your search results."
+rename,Renames a specified field; wildcards can be used to specify multiple fields.
+replace,Replaces values of specified fields with a specified new value.
+rest,Access a REST endpoint and display the returned entities as search results.
+return,Specify the values to return from a subsearch.
+reverse,Reverses the order of the results.
+rex,Specify a Perl regular expression named groups to extract fields while you search.
+rtorder,Buffers events from real-time search to emit them in ascending time order when possible.
+savedsearch,Returns the search results of a saved search.
+script (run),Runs an external Perl or Python script as part of your search.
+scrub,Anonymizes the search results.
+search,Searches indexes for matching events.
+searchtxn,Finds transaction events within specified search constraints.
+selfjoin,Joins results with itself.
+sendemail,Emails search results to a specified email address.
+set,"Performs set operations (union, diff, intersect) on subsearches."
+setfields,Sets the field values for all results to a common value.
+sichart,Summary indexing version of chart.
+sirare,Summary indexing version of rare.
+sistats,Summary indexing version of stats.
+sitimechart,Summary indexing version of timechart.
+sitop,Summary indexing version of top.
+sort,Sorts search results by the specified fields.
+spath,"Provides a straightforward means for extracting fields from structured data formats, XML and JSON."
+stats,"Provides statistics, grouped optionally by fields. See also, Statistical and charting functions."
+strcat,Concatenates string values.
+streamstats,Adds summary statistics to all search results in a streaming manner.
+table,Creates a table using the specified fields.
+tags,Annotates specified fields in your search results with tags.
+tail,Returns the last number n of specified results.
+timechart,"Create a time series chart and corresponding table of statistics. See also, Statistical and charting functions."
+timewrap,"Displays, or wraps, the output of the timechart command so that every timewrap-span range of time is a different series."
+top,Displays the most common values of a field.
+transaction,Groups search results into transactions.
+transpose,Reformats rows of search results as columns.
+trendline,Computes moving averages of fields.
+tscollect,Writes results into tsidx file(s) for later use by tstats command.
+tstats,Calculates statistics over tsidx files created with the tscollect command.
+typeahead,Returns typeahead information on a specified prefix.
+typelearner,Generates suggested eventtypes.
+typer,Calculates the eventtypes for the search results.
+union,Merges the results from two or more datasets into one dataset.
+uniq,Removes any search that is an exact duplicate with a previous result.
+untable,Converts results from a tabular format to a format similar to stats output. Inverse of xyseries and maketable.
+where,"Performs arbitrary filtering on your data. See also, Evaluations functions."
+x11,Enables you to determine the trend in your data by removing the seasonal pattern.
+xmlkv,Extracts XML key-value pairs.
+xmlunescape,Unescapes XML.
+xpath,Redefines the XML path.
+xyseries,Converts results into a format suitable for graphing.

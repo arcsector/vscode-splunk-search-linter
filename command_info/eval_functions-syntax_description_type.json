@@ -1,0 +1,500 @@
+[
+    {
+        "Command_Name": "abs", 
+        "Description": "Returns the absolute value.", 
+        "Supported functions and syntax": "abs(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "acos", 
+        "Description": "Computes the arc cosine of X.", 
+        "Supported functions and syntax": "acos(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "acosh", 
+        "Description": "Computes the arc hyperbolic cosine of X.", 
+        "Supported functions and syntax": "acosh(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "asin", 
+        "Description": "Computes the arc sine of X.", 
+        "Supported functions and syntax": "asin(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "asinh", 
+        "Description": "Computes the arc hyperbolic sine of X.", 
+        "Supported functions and syntax": "asinh(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "atan", 
+        "Description": "Computes the arc tangent of X.", 
+        "Supported functions and syntax": "atan(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "atan2", 
+        "Description": "Computes the arc tangent of X,Y.", 
+        "Supported functions and syntax": "atan2(X,Y)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "atanh", 
+        "Description": "Computes the arc hyperbolic tangent of X.", 
+        "Supported functions and syntax": "atanh(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "case", 
+        "Description": "Accepts alternating conditions and values. Returns the first value for which the condition evaluates to TRUE.", 
+        "Supported functions and syntax": "case(X,\"Y\",...)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "cidrmatch", 
+        "Description": "Returns TRUE or FALSE based on whether an IP address matches a CIDR notation.", 
+        "Supported functions and syntax": "cidrmatch(\"X\",Y)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "ceiling", 
+        "Description": "Rounds the value up to the next highest integer.", 
+        "Supported functions and syntax": "ceiling(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "coalesce", 
+        "Description": "This function takes an arbitrary number of arguments and returns the first value that is not NULL.", 
+        "Supported functions and syntax": "coalesce(X,...)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "commands", 
+        "Description": "Returns a multivalued field that contains a list of the commands used in X.", 
+        "Supported functions and syntax": "commands(X)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "cos", 
+        "Description": "Computes the cosine of an angle of X radians.", 
+        "Supported functions and syntax": "cos(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "cosh", 
+        "Description": "Computes the hyperbolic cosine of X radians.", 
+        "Supported functions and syntax": "cosh(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "exact", 
+        "Description": "Returns the result of a numeric eval calculation with a larger amount of precision in the formatted output.", 
+        "Supported functions and syntax": "exact(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "exp", 
+        "Description": "Returns the exponential function eX.", 
+        "Supported functions and syntax": "exp(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "FALSE", 
+        "Description": "Returns FALSE.", 
+        "Supported functions and syntax": "false()", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "floor", 
+        "Description": "Rounds the value down to the next lowest integer.", 
+        "Supported functions and syntax": "floor(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "hypot", 
+        "Description": "Computes the hypotenuse of a triangle.", 
+        "Supported functions and syntax": "hypot(X,Y)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "if", 
+        "Description": "If the condition X evaluates to TRUE, returns Y, otherwise returns Z.", 
+        "Supported functions and syntax": "if(X,Y,Z)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "in", 
+        "Description": "The function returns TRUE if one of the values in the list matches a value in the field you specify.", 
+        "Supported functions and syntax": "in(VALUE-LIST)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "isbool", 
+        "Description": "Returns TRUE if the field value is Boolean.", 
+        "Supported functions and syntax": "isbool(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "isint", 
+        "Description": "Returns TRUE if the field value is an integer.", 
+        "Supported functions and syntax": "isint(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "isnotnull", 
+        "Description": "Returns TRUE if the field value is not NULL.", 
+        "Supported functions and syntax": "isnotnull(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "isnull", 
+        "Description": "Returns TRUE if the field value is NULL.", 
+        "Supported functions and syntax": "isnull(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "isnum", 
+        "Description": "Returns TRUE if the field value is a number.", 
+        "Supported functions and syntax": "isnum(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "isstr", 
+        "Description": "Returns TRUE if the field value is a string.", 
+        "Supported functions and syntax": "isstr(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "len", 
+        "Description": "Returns the count of the number of characters (not bytes) in the string.", 
+        "Supported functions and syntax": "len(X)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "like", 
+        "Description": "Returns TRUE if TEXT matches PATTERN.", 
+        "Supported functions and syntax": "like(TEXT, PATTERN)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "ln", 
+        "Description": "Returns the natural logarithm.", 
+        "Supported functions and syntax": "ln(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "log", 
+        "Description": "Returns the logarithm of X using Y as the base. If Y is omitted, base 10 is used.", 
+        "Supported functions and syntax": "log(X,Y)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "lower", 
+        "Description": "Converts the string to lowercase.", 
+        "Supported functions and syntax": "lower(X)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "ltrim", 
+        "Description": "Trims the characters represented in Y from the left side of the string.", 
+        "Supported functions and syntax": "ltrim(X,Y)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "match", 
+        "Description": "Returns TRUE or FALSE based on whether REGEX matches SUBJECT.", 
+        "Supported functions and syntax": "match(SUBJECT, \"REGEX\")", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "max", 
+        "Description": "Returns the maximum of the string or numeric values.", 
+        "Supported functions and syntax": "max(X,...)", 
+        "Type of function": "Statistical eval functions"
+    }, 
+    {
+        "Command_Name": "md5", 
+        "Description": "Computes the md5 hash for the value X.", 
+        "Supported functions and syntax": "md5(X)", 
+        "Type of function": "Cryptographic functions"
+    }, 
+    {
+        "Command_Name": "min", 
+        "Description": "Returns the minimum of the string or numeric values.", 
+        "Supported functions and syntax": "min(X,...)", 
+        "Type of function": "Statistical eval functions"
+    }, 
+    {
+        "Command_Name": "mvappend", 
+        "Description": "Returns a multivalue result based on all of values specified.", 
+        "Supported functions and syntax": "mvappend(X,...)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvcount", 
+        "Description": "Returns the count of the number of values in the specified field.", 
+        "Supported functions and syntax": "mvcount(MVFIELD)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvdedup", 
+        "Description": "Removes all of the duplicate values from a multivalue field.", 
+        "Supported functions and syntax": "mvdedup(X)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvfilter", 
+        "Description": "Filters a multivalue field based on an arbitrary Boolean expression X.", 
+        "Supported functions and syntax": "mvfilter(X)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvfind", 
+        "Description": "Finds the index of a value in a multivalue field that matches the REGEX.", 
+        "Supported functions and syntax": "mvfind(MVFIELD,\"REGEX\")", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvindex", 
+        "Description": "Returns a set of values from a multivalue field described by STARTINDEX and ENDINDEX.", 
+        "Supported functions and syntax": "mvindex(MVFIELD,STARTINDEX,ENDINDEX)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvjoin", 
+        "Description": "Takes all of the values in a multivalue field and appends them together delimited by STR.", 
+        "Supported functions and syntax": "mvjoin(MVFIELD,STR)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvrange", 
+        "Description": "Creates a multivalue field with a range of numbers between X and Y, incrementing by Z.", 
+        "Supported functions and syntax": "mvrange(X,Y,Z)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvsort", 
+        "Description": "Returns the values of a multivalue field sorted lexicographically.", 
+        "Supported functions and syntax": "mvsort(X)", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "mvzip", 
+        "Description": "Takes two multivalue fields, X and Y, and combines them by stitching together the first value of X with the first value of field Y, then the second with the second, and so on.", 
+        "Supported functions and syntax": "mvzip(X,Y,\"Z\")", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "now", 
+        "Description": "Returns the time that the search was started.", 
+        "Supported functions and syntax": "now()", 
+        "Type of function": "Date and Time functions"
+    }, 
+    {
+        "Command_Name": "null", 
+        "Description": "This function takes no arguments and returns NULL.", 
+        "Supported functions and syntax": "null()", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "nullif", 
+        "Description": "This function is used to compare fields. The function takes two arguments, X and Y, and returns NULL if X = Y. Otherwise it returns X.", 
+        "Supported functions and syntax": "nullif(X,Y)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "pi", 
+        "Description": "Returns the constant pi to 11 digits of precision.", 
+        "Supported functions and syntax": "pi()", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "pow", 
+        "Description": "Returns X to the power of Y, XY.", 
+        "Supported functions and syntax": "pow(X,Y)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "printf", 
+        "Description": "Creates a formatted string based on a format description that you provide.", 
+        "Supported functions and syntax": "printf(\"format\",arguments)", 
+        "Type of function": "Conversion functions"
+    }, 
+    {
+        "Command_Name": "random", 
+        "Description": "Returns a pseudo-random integer ranging from zero to 231-1.", 
+        "Supported functions and syntax": "random()", 
+        "Type of function": "Statistical eval functions"
+    }, 
+    {
+        "Command_Name": "relative_time", 
+        "Description": "Adjusts the time by a relative time specifier.", 
+        "Supported functions and syntax": "relative_time(X,Y)", 
+        "Type of function": "Date and Time functions"
+    }, 
+    {
+        "Command_Name": "replace", 
+        "Description": "Returns a string formed by substituting string Z for every occurrence of regex string Y in string X.", 
+        "Supported functions and syntax": "replace(X,Y,Z)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "round", 
+        "Description": "Returns X rounded to the amount of decimal places specified by Y. The default is to round to an integer.", 
+        "Supported functions and syntax": "round(X,Y)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "rtrim", 
+        "Description": "Returns X with the characters in Y trimmed from the right side.", 
+        "Supported functions and syntax": "rtrim(X,Y)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "searchmatch", 
+        "Description": "Use this function to return TRUE if the search string (X) matches the event.", 
+        "Supported functions and syntax": "searchmatch(X)", 
+        "Type of function": "Comparison and Conditional functions"
+    }, 
+    {
+        "Command_Name": "sha1", 
+        "Description": "Computes the sha1 hash for the value X.", 
+        "Supported functions and syntax": "sha1(X)", 
+        "Type of function": "Cryptographic functions"
+    }, 
+    {
+        "Command_Name": "sha256", 
+        "Description": "Computes the sha256 hash for the value X.", 
+        "Supported functions and syntax": "sha256(X)", 
+        "Type of function": "Cryptographic functions"
+    }, 
+    {
+        "Command_Name": "sha512", 
+        "Description": "Computes the sha512 hash for the value X.", 
+        "Supported functions and syntax": "sha512(X)", 
+        "Type of function": "Cryptographic functions"
+    }, 
+    {
+        "Command_Name": "sigfig", 
+        "Description": "Rounds X to the appropriate number of significant figures.", 
+        "Supported functions and syntax": "sigfig(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "sin", 
+        "Description": "Computes the sine of X.", 
+        "Supported functions and syntax": "sin(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "sinh", 
+        "Description": "Computes the hyperbolic sine of X.", 
+        "Supported functions and syntax": "sinh(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "spath", 
+        "Description": "Extracts a value from a structured data type (XML or JSON) in X based on a location path in Y.", 
+        "Supported functions and syntax": "spath(X,Y)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "split", 
+        "Description": "Returns a mv field splitting X by the delimited character Y.", 
+        "Supported functions and syntax": "split(X,\"Y\")", 
+        "Type of function": "Multivalue eval functions"
+    }, 
+    {
+        "Command_Name": "sqrt", 
+        "Description": "Returns the square root of the value.", 
+        "Supported functions and syntax": "sqrt(X)", 
+        "Type of function": "Mathematical functions"
+    }, 
+    {
+        "Command_Name": "strftime", 
+        "Description": "Takes a UNIX time and renders it into a human readable format.", 
+        "Supported functions and syntax": "strftime(X,Y)", 
+        "Type of function": "Date and Time functions"
+    }, 
+    {
+        "Command_Name": "strptime", 
+        "Description": "Takes a human readable time and renders it into UNIX time.", 
+        "Supported functions and syntax": "strptime(X,Y)", 
+        "Type of function": "Date and Time functions"
+    }, 
+    {
+        "Command_Name": "substr", 
+        "Description": "Returns a substring from X based on the starting position Y and the length Z.", 
+        "Supported functions and syntax": "substr(X,Y,Z)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "tan", 
+        "Description": "Computes the tangent of X.", 
+        "Supported functions and syntax": "tan(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "tanh", 
+        "Description": "Computes the hyperbolic tangent of X.", 
+        "Supported functions and syntax": "tanh(X)", 
+        "Type of function": "Trigonometry and Hyperbolic functions"
+    }, 
+    {
+        "Command_Name": "time", 
+        "Description": "The time that eval function was computed. The time will be different for each event, based on when the event was processed.", 
+        "Supported functions and syntax": "time()", 
+        "Type of function": "Date and Time functions"
+    }, 
+    {
+        "Command_Name": "tonumber", 
+        "Description": "Converts a string to a number.", 
+        "Supported functions and syntax": "tonumber(NUMSTR,BASE)", 
+        "Type of function": "Conversion functions"
+    }, 
+    {
+        "Command_Name": "tostring", 
+        "Description": "Converts the input, such as a number or a Boolean value, to a string.", 
+        "Supported functions and syntax": "tostring(X,Y)", 
+        "Type of function": "Conversion functions"
+    }, 
+    {
+        "Command_Name": "trim", 
+        "Description": "Trims the characters represented in Y from both sides of the string X.", 
+        "Supported functions and syntax": "trim(X,Y)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "TRUE", 
+        "Description": "Returns TRUE.", 
+        "Supported functions and syntax": "true()", 
+        "Type of function": ""
+    }, 
+    {
+        "Command_Name": "typeof", 
+        "Description": "Returns a string that indicates the field type, such as Number, String, Boolean, and so forth.", 
+        "Supported functions and syntax": "typeof(X)", 
+        "Type of function": "Informational functions"
+    }, 
+    {
+        "Command_Name": "upper", 
+        "Description": "Returns the string in uppercase.", 
+        "Supported functions and syntax": "upper(X)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "urldecode", 
+        "Description": "Replaces URL escaped characters with the original characters.", 
+        "Supported functions and syntax": "urldecode(X)", 
+        "Type of function": "Text functions"
+    }, 
+    {
+        "Command_Name": "validate", 
+        "Description": "Use this function to return the string Y corresponding to the first expression X that evaluates to FALSE. This function is the opposite of the case function.", 
+        "Supported functions and syntax": "validate(X,Y,...)", 
+        "Type of function": "Comparison and Conditional functions"
+    }
+]

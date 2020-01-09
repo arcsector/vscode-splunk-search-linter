@@ -1,0 +1,84 @@
+Command_Name,Supported functions and syntax,Description,Type of function
+abs,abs(X),Returns the absolute value.,Mathematical functions
+acos,acos(X),Computes the arc cosine of X.,Trigonometry and Hyperbolic functions
+acosh,acosh(X),Computes the arc hyperbolic cosine of X.,Trigonometry and Hyperbolic functions
+asin,asin(X),Computes the arc sine of X.,Trigonometry and Hyperbolic functions
+asinh,asinh(X),Computes the arc hyperbolic sine of X.,Trigonometry and Hyperbolic functions
+atan,atan(X),Computes the arc tangent of X.,Trigonometry and Hyperbolic functions
+atan2,"atan2(X,Y)","Computes the arc tangent of X,Y.",Trigonometry and Hyperbolic functions
+atanh,atanh(X),Computes the arc hyperbolic tangent of X.,Trigonometry and Hyperbolic functions
+case,"case(X,""Y"",...)",Accepts alternating conditions and values. Returns the first value for which the condition evaluates to TRUE.,Comparison and Conditional functions
+cidrmatch,"cidrmatch(""X"",Y)",Returns TRUE or FALSE based on whether an IP address matches a CIDR notation.,Comparison and Conditional functions
+ceiling,ceiling(X),Rounds the value up to the next highest integer.,Mathematical functions
+coalesce,"coalesce(X,...)",This function takes an arbitrary number of arguments and returns the first value that is not NULL.,Comparison and Conditional functions
+commands,commands(X),Returns a multivalued field that contains a list of the commands used in X.,Multivalue eval functions
+cos,cos(X),Computes the cosine of an angle of X radians.,Trigonometry and Hyperbolic functions
+cosh,cosh(X),Computes the hyperbolic cosine of X radians.,Trigonometry and Hyperbolic functions
+exact,exact(X),Returns the result of a numeric eval calculation with a larger amount of precision in the formatted output.,Mathematical functions
+exp,exp(X),Returns the exponential function eX.,Mathematical functions
+FALSE,false(),Returns FALSE.,Comparison and Conditional functions
+floor,floor(X),Rounds the value down to the next lowest integer.,Mathematical functions
+hypot,"hypot(X,Y)",Computes the hypotenuse of a triangle.,Trigonometry and Hyperbolic functions
+if,"if(X,Y,Z)","If the condition X evaluates to TRUE, returns Y, otherwise returns Z.",Comparison and Conditional functions
+in,in(VALUE-LIST),The function returns TRUE if one of the values in the list matches a value in the field you specify.,Comparison and Conditional functions
+isbool,isbool(X),Returns TRUE if the field value is Boolean.,Informational functions
+isint,isint(X),Returns TRUE if the field value is an integer.,Informational functions
+isnotnull,isnotnull(X),Returns TRUE if the field value is not NULL.,Informational functions
+isnull,isnull(X),Returns TRUE if the field value is NULL.,Informational functions
+isnum,isnum(X),Returns TRUE if the field value is a number.,Informational functions
+isstr,isstr(X),Returns TRUE if the field value is a string.,Informational functions
+len,len(X),Returns the count of the number of characters (not bytes) in the string.,Text functions
+like,"like(TEXT, PATTERN)",Returns TRUE if TEXT matches PATTERN.,Comparison and Conditional functions
+ln,ln(X),Returns the natural logarithm.,Mathematical functions
+log,"log(X,Y)","Returns the logarithm of X using Y as the base. If Y is omitted, base 10 is used.",Mathematical functions
+lower,lower(X),Converts the string to lowercase.,Text functions
+ltrim,"ltrim(X,Y)",Trims the characters represented in Y from the left side of the string.,Text functions
+match,"match(SUBJECT, ""REGEX"")",Returns TRUE or FALSE based on whether REGEX matches SUBJECT.,Comparison and Conditional functions
+max,"max(X,...)",Returns the maximum of the string or numeric values.,Statistical eval functions
+md5,md5(X),Computes the md5 hash for the value X.,Cryptographic functions
+min,"min(X,...)",Returns the minimum of the string or numeric values.,Statistical eval functions
+mvappend,"mvappend(X,...)",Returns a multivalue result based on all of values specified.,Multivalue eval functions
+mvcount,mvcount(MVFIELD),Returns the count of the number of values in the specified field.,Multivalue eval functions
+mvdedup,mvdedup(X),Removes all of the duplicate values from a multivalue field.,Multivalue eval functions
+mvfilter,mvfilter(X),Filters a multivalue field based on an arbitrary Boolean expression X.,Multivalue eval functions
+mvfind,"mvfind(MVFIELD,""REGEX"")",Finds the index of a value in a multivalue field that matches the REGEX.,Multivalue eval functions
+mvindex,"mvindex(MVFIELD,STARTINDEX,ENDINDEX)",Returns a set of values from a multivalue field described by STARTINDEX and ENDINDEX.,Multivalue eval functions
+mvjoin,"mvjoin(MVFIELD,STR)",Takes all of the values in a multivalue field and appends them together delimited by STR.,Multivalue eval functions
+mvrange,"mvrange(X,Y,Z)","Creates a multivalue field with a range of numbers between X and Y, incrementing by Z.",Multivalue eval functions
+mvsort,mvsort(X),Returns the values of a multivalue field sorted lexicographically.,Multivalue eval functions
+mvzip,"mvzip(X,Y,""Z"")","Takes two multivalue fields, X and Y, and combines them by stitching together the first value of X with the first value of field Y, then the second with the second, and so on.",Multivalue eval functions
+now,now(),Returns the time that the search was started.,Date and Time functions
+null,null(),This function takes no arguments and returns NULL.,Comparison and Conditional functions
+nullif,"nullif(X,Y)","This function is used to compare fields. The function takes two arguments, X and Y, and returns NULL if X = Y. Otherwise it returns X.",Comparison and Conditional functions
+pi,pi(),Returns the constant pi to 11 digits of precision.,Mathematical functions
+pow,"pow(X,Y)","Returns X to the power of Y, XY.",Mathematical functions
+printf,"printf(""format"",arguments)",Creates a formatted string based on a format description that you provide.,Conversion functions
+random,random(),Returns a pseudo-random integer ranging from zero to 231-1.,Statistical eval functions
+relative_time,"relative_time(X,Y)",Adjusts the time by a relative time specifier.,Date and Time functions
+replace,"replace(X,Y,Z)",Returns a string formed by substituting string Z for every occurrence of regex string Y in string X.,Text functions
+round,"round(X,Y)",Returns X rounded to the amount of decimal places specified by Y. The default is to round to an integer.,Mathematical functions
+rtrim,"rtrim(X,Y)",Returns X with the characters in Y trimmed from the right side.,Text functions
+searchmatch,searchmatch(X),Use this function to return TRUE if the search string (X) matches the event.,Comparison and Conditional functions
+sha1,sha1(X),Computes the sha1 hash for the value X.,Cryptographic functions
+sha256,sha256(X),Computes the sha256 hash for the value X.,Cryptographic functions
+sha512,sha512(X),Computes the sha512 hash for the value X.,Cryptographic functions
+sigfig,sigfig(X),Rounds X to the appropriate number of significant figures.,Mathematical functions
+sin,sin(X),Computes the sine of X.,Trigonometry and Hyperbolic functions
+sinh,sinh(X),Computes the hyperbolic sine of X.,Trigonometry and Hyperbolic functions
+spath,"spath(X,Y)",Extracts a value from a structured data type (XML or JSON) in X based on a location path in Y.,Text functions
+split,"split(X,""Y"")",Returns a mv field splitting X by the delimited character Y.,Multivalue eval functions
+sqrt,sqrt(X),Returns the square root of the value.,Mathematical functions
+strftime,"strftime(X,Y)",Takes a UNIX time and renders it into a human readable format.,Date and Time functions
+strptime,"strptime(X,Y)",Takes a human readable time and renders it into UNIX time.,Date and Time functions
+substr,"substr(X,Y,Z)",Returns a substring from X based on the starting position Y and the length Z.,Text functions
+tan,tan(X),Computes the tangent of X.,Trigonometry and Hyperbolic functions
+tanh,tanh(X),Computes the hyperbolic tangent of X.,Trigonometry and Hyperbolic functions
+time,time(),"The time that eval function was computed. The time will be different for each event, based on when the event was processed.",Date and Time functions
+tonumber,"tonumber(NUMSTR,BASE)",Converts a string to a number.,Conversion functions
+tostring,"tostring(X,Y)","Converts the input, such as a number or a Boolean value, to a string.",Conversion functions
+trim,"trim(X,Y)",Trims the characters represented in Y from both sides of the string X.,Text functions
+TRUE,true(),Returns TRUE.,
+typeof,typeof(X),"Returns a string that indicates the field type, such as Number, String, Boolean, and so forth.",Informational functions
+upper,upper(X),Returns the string in uppercase.,Text functions
+urldecode,urldecode(X),Replaces URL escaped characters with the original characters.,Text functions
+validate,"validate(X,Y,...)",Use this function to return the string Y corresponding to the first expression X that evaluates to FALSE. This function is the opposite of the case function.,Comparison and Conditional functions

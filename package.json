@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onLanguage:splunk"
 	],
 	"main": "./out/extension.js",
 	"contributes": {

@@ -1,0 +1,95 @@
+[
+    {
+        "Command_Name": "avg"
+    }, 
+    {
+        "Command_Name": "count"
+    }, 
+    {
+        "Command_Name": "distinct_count"
+    }, 
+    {
+        "Command_Name": "estdc"
+    }, 
+    {
+        "Command_Name": "estdc_error"
+    }, 
+    {
+        "Command_Name": "max"
+    }, 
+    {
+        "Command_Name": "mean"
+    }, 
+    {
+        "Command_Name": "median"
+    }, 
+    {
+        "Command_Name": "min"
+    }, 
+    {
+        "Command_Name": "mode"
+    }, 
+    {
+        "Command_Name": "percentile"
+    }, 
+    {
+        "Command_Name": "range"
+    }, 
+    {
+        "Command_Name": "stdev"
+    }, 
+    {
+        "Command_Name": "stdevp"
+    }, 
+    {
+        "Command_Name": "sum"
+    }, 
+    {
+        "Command_Name": "sumsq"
+    }, 
+    {
+        "Command_Name": "var"
+    }, 
+    {
+        "Command_Name": "varp"
+    }, 
+    {
+        "Command_Name": "first"
+    }, 
+    {
+        "Command_Name": "last"
+    }, 
+    {
+        "Command_Name": "list"
+    }, 
+    {
+        "Command_Name": "values"
+    }, 
+    {
+        "Command_Name": "earliest"
+    }, 
+    {
+        "Command_Name": "earliest_time"
+    }, 
+    {
+        "Command_Name": "latest"
+    }, 
+    {
+        "Command_Name": "latest_time"
+    }, 
+    {
+        "Command_Name": "per_day"
+    }, 
+    {
+        "Command_Name": "per_hour"
+    }, 
+    {
+        "Command_Name": "per_minute"
+    }, 
+    {
+        "Command_Name": "per_second"
+    }, 
+    {
+        "Command_Name": "rate"
+    }
+]

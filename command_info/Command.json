@@ -1,0 +1,428 @@
+[
+    {
+        "Command_Name": "abstract"
+    }, 
+    {
+        "Command_Name": "accum"
+    }, 
+    {
+        "Command_Name": "addcoltotals"
+    }, 
+    {
+        "Command_Name": "addinfo"
+    }, 
+    {
+        "Command_Name": "addtotals"
+    }, 
+    {
+        "Command_Name": "analyzefields"
+    }, 
+    {
+        "Command_Name": "anomalies"
+    }, 
+    {
+        "Command_Name": "anomalousvalue"
+    }, 
+    {
+        "Command_Name": "anomalydetection"
+    }, 
+    {
+        "Command_Name": "append"
+    }, 
+    {
+        "Command_Name": "appendcols"
+    }, 
+    {
+        "Command_Name": "appendpipe"
+    }, 
+    {
+        "Command_Name": "arules"
+    }, 
+    {
+        "Command_Name": "associate"
+    }, 
+    {
+        "Command_Name": "audit"
+    }, 
+    {
+        "Command_Name": "autoregress"
+    }, 
+    {
+        "Command_Name": "bin"
+    }, 
+    {
+        "Command_Name": "bucketdir"
+    }, 
+    {
+        "Command_Name": "chart"
+    }, 
+    {
+        "Command_Name": "cluster"
+    }, 
+    {
+        "Command_Name": "cofilter"
+    }, 
+    {
+        "Command_Name": "collect"
+    }, 
+    {
+        "Command_Name": "concurrency"
+    }, 
+    {
+        "Command_Name": "contingency"
+    }, 
+    {
+        "Command_Name": "convert"
+    }, 
+    {
+        "Command_Name": "correlate"
+    }, 
+    {
+        "Command_Name": "datamodel"
+    }, 
+    {
+        "Command_Name": "dbinspect"
+    }, 
+    {
+        "Command_Name": "dedup"
+    }, 
+    {
+        "Command_Name": "delete"
+    }, 
+    {
+        "Command_Name": "delta"
+    }, 
+    {
+        "Command_Name": "diff"
+    }, 
+    {
+        "Command_Name": "erex"
+    }, 
+    {
+        "Command_Name": "eval"
+    }, 
+    {
+        "Command_Name": "eventcount"
+    }, 
+    {
+        "Command_Name": "eventstats"
+    }, 
+    {
+        "Command_Name": "extract"
+    }, 
+    {
+        "Command_Name": "fieldformat"
+    }, 
+    {
+        "Command_Name": "fields"
+    }, 
+    {
+        "Command_Name": "fieldsummary"
+    }, 
+    {
+        "Command_Name": "filldown"
+    }, 
+    {
+        "Command_Name": "fillnull"
+    }, 
+    {
+        "Command_Name": "findtypes"
+    }, 
+    {
+        "Command_Name": "folderize"
+    }, 
+    {
+        "Command_Name": "foreach"
+    }, 
+    {
+        "Command_Name": "format"
+    }, 
+    {
+        "Command_Name": "from"
+    }, 
+    {
+        "Command_Name": "gauge"
+    }, 
+    {
+        "Command_Name": "gentimes"
+    }, 
+    {
+        "Command_Name": "geom"
+    }, 
+    {
+        "Command_Name": "geomfilter"
+    }, 
+    {
+        "Command_Name": "geostats"
+    }, 
+    {
+        "Command_Name": "head"
+    }, 
+    {
+        "Command_Name": "highlight"
+    }, 
+    {
+        "Command_Name": "history"
+    }, 
+    {
+        "Command_Name": "iconify"
+    }, 
+    {
+        "Command_Name": "input"
+    }, 
+    {
+        "Command_Name": "inputcsv"
+    }, 
+    {
+        "Command_Name": "inputlookup"
+    }, 
+    {
+        "Command_Name": "iplocation"
+    }, 
+    {
+        "Command_Name": "join"
+    }, 
+    {
+        "Command_Name": "kmeans"
+    }, 
+    {
+        "Command_Name": "kvform"
+    }, 
+    {
+        "Command_Name": "loadjob"
+    }, 
+    {
+        "Command_Name": "localize"
+    }, 
+    {
+        "Command_Name": "localop"
+    }, 
+    {
+        "Command_Name": "lookup"
+    }, 
+    {
+        "Command_Name": "makecontinuous"
+    }, 
+    {
+        "Command_Name": "makemv"
+    }, 
+    {
+        "Command_Name": "makeresults"
+    }, 
+    {
+        "Command_Name": "map"
+    }, 
+    {
+        "Command_Name": "mcollect"
+    }, 
+    {
+        "Command_Name": "metadata"
+    }, 
+    {
+        "Command_Name": "metasearch"
+    }, 
+    {
+        "Command_Name": "meventcollect"
+    }, 
+    {
+        "Command_Name": "mstats"
+    }, 
+    {
+        "Command_Name": "multikv"
+    }, 
+    {
+        "Command_Name": "multisearch"
+    }, 
+    {
+        "Command_Name": "mvcombine"
+    }, 
+    {
+        "Command_Name": "mvexpand"
+    }, 
+    {
+        "Command_Name": "nomv"
+    }, 
+    {
+        "Command_Name": "outlier"
+    }, 
+    {
+        "Command_Name": "outputcsv"
+    }, 
+    {
+        "Command_Name": "outputlookup"
+    }, 
+    {
+        "Command_Name": "outputtext"
+    }, 
+    {
+        "Command_Name": "overlap"
+    }, 
+    {
+        "Command_Name": "pivot"
+    }, 
+    {
+        "Command_Name": "predict"
+    }, 
+    {
+        "Command_Name": "rangemap"
+    }, 
+    {
+        "Command_Name": "rare"
+    }, 
+    {
+        "Command_Name": "regex"
+    }, 
+    {
+        "Command_Name": "relevancy"
+    }, 
+    {
+        "Command_Name": "reltime"
+    }, 
+    {
+        "Command_Name": "rename"
+    }, 
+    {
+        "Command_Name": "replace"
+    }, 
+    {
+        "Command_Name": "rest"
+    }, 
+    {
+        "Command_Name": "return"
+    }, 
+    {
+        "Command_Name": "reverse"
+    }, 
+    {
+        "Command_Name": "rex"
+    }, 
+    {
+        "Command_Name": "rtorder"
+    }, 
+    {
+        "Command_Name": "savedsearch"
+    }, 
+    {
+        "Command_Name": "script"
+    }, 
+    {
+        "Command_Name": "scrub"
+    }, 
+    {
+        "Command_Name": "search"
+    }, 
+    {
+        "Command_Name": "searchtxn"
+    }, 
+    {
+        "Command_Name": "selfjoin"
+    }, 
+    {
+        "Command_Name": "sendemail"
+    }, 
+    {
+        "Command_Name": "set"
+    }, 
+    {
+        "Command_Name": "setfields"
+    }, 
+    {
+        "Command_Name": "sichart"
+    }, 
+    {
+        "Command_Name": "sirare"
+    }, 
+    {
+        "Command_Name": "sistats"
+    }, 
+    {
+        "Command_Name": "sitimechart"
+    }, 
+    {
+        "Command_Name": "sitop"
+    }, 
+    {
+        "Command_Name": "sort"
+    }, 
+    {
+        "Command_Name": "spath"
+    }, 
+    {
+        "Command_Name": "stats"
+    }, 
+    {
+        "Command_Name": "strcat"
+    }, 
+    {
+        "Command_Name": "streamstats"
+    }, 
+    {
+        "Command_Name": "table"
+    }, 
+    {
+        "Command_Name": "tags"
+    }, 
+    {
+        "Command_Name": "tail"
+    }, 
+    {
+        "Command_Name": "timechart"
+    }, 
+    {
+        "Command_Name": "timewrap"
+    }, 
+    {
+        "Command_Name": "top"
+    }, 
+    {
+        "Command_Name": "transaction"
+    }, 
+    {
+        "Command_Name": "transpose"
+    }, 
+    {
+        "Command_Name": "trendline"
+    }, 
+    {
+        "Command_Name": "tscollect"
+    }, 
+    {
+        "Command_Name": "tstats"
+    }, 
+    {
+        "Command_Name": "typeahead"
+    }, 
+    {
+        "Command_Name": "typelearner"
+    }, 
+    {
+        "Command_Name": "typer"
+    }, 
+    {
+        "Command_Name": "union"
+    }, 
+    {
+        "Command_Name": "uniq"
+    }, 
+    {
+        "Command_Name": "untable"
+    }, 
+    {
+        "Command_Name": "where"
+    }, 
+    {
+        "Command_Name": "x11"
+    }, 
+    {
+        "Command_Name": "xmlkv"
+    }, 
+    {
+        "Command_Name": "xmlunescape"
+    }, 
+    {
+        "Command_Name": "xpath"
+    }, 
+    {
+        "Command_Name": "xyseries"
+    }
+]

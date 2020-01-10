@@ -39,7 +39,7 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
         if (related in entry) { hasRelated = true; }
 
         let detail: string = "";
-        let documentation: vscode.MarkdownString = new vscode.MarkdownString(entry[description]);
+        let documentation = entry[description];
         if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + "\n##### Related Commands:\n" + entry[related]); }
         if ( hasType ) { detail = detail + '(' + entry[functionType] + ') '; }
         if ( hasSyntax ) { detail = detail + entry[syntax]; }
@@ -53,7 +53,3 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
     }
     return completionArray;
 }
-
-//export const mainFunctions = returnCompletionItemfromJSON('Command_description_Related_table', commandInfoPath);
-//export const evalFunctions = returnCompletionItemfromJSON('eval_functions-syntax_description_type', commandInfoPath);
-//export const statsFunctions = returnCompletionItemfromJSON('stats_functions-syntax_description_type', commandInfoPath);

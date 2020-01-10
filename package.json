@@ -12,15 +12,16 @@
 	"activationEvents": [
 		"onLanguage:splunk"
 	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arcsector/vscode-splunk-search-linter.git"
 	},
+	"icon": "assets/icon.png",
+	"galleryBanner": {
+		"color": "#1e1e1e",
+		"theme": "dark"
+	},
+	"main": "./out/extension.js",
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",

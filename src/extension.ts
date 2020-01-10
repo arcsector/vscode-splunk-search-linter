@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { returnCompletionItemfromJSON } from './splunkParser';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -15,6 +16,9 @@ export function activate(context: vscode.ExtensionContext) {
 		scheme: 'file',
 		language: 'splunk'
 	};
+	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table');
+	const evalFunctions = returnCompletionItemfromJSON(context, 'eval_functions-syntax_description_type');
+	const statsFunctions = returnCompletionItemfromJSON(context, 'stats_functions-syntax_description_type');
 
 	// Here we will start our Completion provider
 	let splunkProvider = vscode.languages.registerCompletionItemProvider(splunkSelector, {
@@ -49,12 +53,16 @@ export function activate(context: vscode.ExtensionContext) {
 				title: 'Re-trigger completions...'
 			};
 			// return all completion items as array 
-			return [
+			let newArray = [
 				simpleCompletion,
 				snippetCompletion,
 				commitCharacterCompletion,
 				commandCompletion
 			];
+
+			console.log(mainFunctions);
+
+			return newArray.concat(mainFunctions, evalFunctions, statsFunctions);
 		}
 	});
 

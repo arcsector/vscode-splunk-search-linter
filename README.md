@@ -10,10 +10,12 @@ This is the README for your extension "vscode-splunk-search-linter". After writi
 - Related main commands
 
 ## TODO
+
 - [ ] Syntax for main commands
 - [X] Syntax for eval and stats commands
 - [X] Description for commands
 - [X] Related main commands
-- [ ] add in triggerSuggest clause after stats and eval commands for respective arguments
+- [X] Add in suggestion after pipe, stats, and eval commands for respective commands
+- [ ] Add in suggestion after stats commands with arguments for keywords (AS, BY, OVER, WHERE, etc...)
 - [ ] Publish to VSCE Marketplace
 - [ ] Bundle with syntax highlighter and conf file linter

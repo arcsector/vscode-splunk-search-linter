@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 		scheme: 'file',
 		language: 'splunk'
 	};
-	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table');
+	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table2');
 	const evalFunctions = returnCompletionItemfromJSON(context, 'eval_functions-syntax_description_type');
 	const statsFunctions = returnCompletionItemfromJSON(context, 'stats_functions-syntax_description_type');
 
@@ -75,7 +75,7 @@ export function activate(context: vscode.ExtensionContext) {
 				let regexp = new RegExp('\\\\|[\\s]*');
 				let linePrefix = document.lineAt(position).text.substr(0, position.character);
 
-				if (!linePrefix.match(regexp)) {
+				if (!(linePrefix.endsWith('| ') || linePrefix.endsWith('|'))) {
 					return undefined;
 				}
 				return mainFunctions;

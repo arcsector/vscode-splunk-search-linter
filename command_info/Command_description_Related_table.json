@@ -80,7 +80,7 @@
         "Related commands": "accum, autoregress, delta, trendline, streamstats"
     }, 
     {
-        "Command_Name": "bin (bucket)", 
+        "Command_Name": "bin", 
         "Description": "Puts continuous numerical values into discrete sets.", 
         "Related commands": "chart, timechart"
     }, 
@@ -180,7 +180,7 @@
         "Related commands": "stats"
     }, 
     {
-        "Command_Name": "extract (kv)", 
+        "Command_Name": "extract", 
         "Description": "Extracts field-value pairs from search results.", 
         "Related commands": "kvform, multikv, xmlkv, rex"
     }, 
@@ -505,7 +505,7 @@
         "Related commands": ""
     }, 
     {
-        "Command_Name": "script (run)", 
+        "Command_Name": "script", 
         "Description": "Runs an external Perl or Python script as part of your search.", 
         "Related commands": ""
     }, 

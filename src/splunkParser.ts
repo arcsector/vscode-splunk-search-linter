@@ -28,7 +28,7 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
     
     for (const entry of fileJson) {
         const splunkCompletionItem = new vscode.CompletionItem(entry[name]);
-        splunkCompletionItem.kind = vscode.CompletionItemKind.Keyword;
+        splunkCompletionItem.kind = vscode.CompletionItemKind.Class;
         splunkCompletionItem.commitCharacters = ['\t'];
 
         let hasSyntax: boolean = false;
@@ -42,10 +42,14 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
         let documentation = entry[description];
         if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + "\n##### Related Commands:\n" + entry[related]); }
         if ( hasType ) { detail = detail + '(' + entry[functionType] + ') '; }
-        if ( hasSyntax ) { detail = detail + entry[syntax]; }
+        if ( hasSyntax ) {
+            detail = detail + entry[syntax];
+            splunkCompletionItem.kind = vscode.CompletionItemKind.Method;
+        }
+        else { detail = entry[name]; }
         
-        console.log(detail);
-        console.log(documentation);
+        //console.log(detail);
+        //console.log(documentation);
 
         splunkCompletionItem.detail = detail;
         splunkCompletionItem.documentation = documentation;

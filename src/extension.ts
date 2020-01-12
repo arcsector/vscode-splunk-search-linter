@@ -16,6 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table3');
 	const evalFunctions = returnCompletionItemfromJSON(context, 'eval_functions-syntax_description_type');
 	const statsFunctions = returnCompletionItemfromJSON(context, 'stats_functions-syntax_description_type');
+	const operators = returnCompletionItemfromJSON(context, 'operators-syntax_description_type');
 
 	console.log("Start providing completion items");
 	// Here we will start our Completion provider
@@ -84,7 +85,25 @@ export function activate(context: vscode.ExtensionContext) {
 		' ', '|'
 	);
 
-	context.subscriptions.push(splunkProvider, evalSplunkProvider, statsSplunkProvider, pipeSplunkProvider);
+	// Here we try and suggest new commands after stats commands
+	let operatorSplunkProvider = vscode.languages.registerCompletionItemProvider(
+		splunkSelector,
+		{
+			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
+				console.log("Providing stats completion items");
+				let regexp = new RegExp('(avg\\s|count\\s|distinct_count\\s|estdc\\s|estdc_error\\s|max\\s|mean\\s|median\\s|min\\s|mode\\s|percentile\\s|range\\s|stdev\\s|stdevp\\s|sum\\s|sumsq\\s|var\\s|varp\\s|first\\s|last\\s|list\\s|values\\s|earliest\\s|earliest_time\\s|latest\\s|latest_time\\s|per_day\\s|per_hour\\s|per_minute\\s|per_second\\s|rate\\s)');
+				let linePrefix = document.lineAt(position).text.substr(0, position.character);
+
+				if (!(linePrefix.match(regexp))) {
+					return undefined;
+				}
+				return operators;
+			}
+		},
+		' '
+	);
+
+	context.subscriptions.push(splunkProvider, evalSplunkProvider, statsSplunkProvider, pipeSplunkProvider, operatorSplunkProvider);
 }
 
 // this method is called when your extension is deactivated

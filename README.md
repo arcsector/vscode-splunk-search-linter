@@ -16,6 +16,6 @@ This is the README for the Splunk Search Linter.
 - [X] Description for commands
 - [X] Related main commands
 - [X] Add in suggestion after pipe, stats, and eval commands for respective commands
-- [ ] Add in suggestion after stats commands with arguments for keywords (AS, BY, OVER, WHERE, etc...)
+- [X] Add in suggestion after stats commands with arguments for keywords (AS, BY, OVER, WHERE, etc...)
 - [ ] Publish to VSCE Marketplace
 - [ ] Bundle with syntax highlighter and conf file linter

@@ -1,17 +1,17 @@
 # vscode-splunk-search-linter README
 
-This is the README for your extension "vscode-splunk-search-linter". After writing up a brief description, we recommend including the following sections.
+This is the README for the Splunk Search Linter.
 
 ## Features
 
 - Autocompleting commands
-- Syntax for eval and stats commands
+- Syntax for main, eval, and stats commands
 - Description for commands
 - Related main commands
 
 ## TODO
 
-- [ ] Syntax for main commands
+- [X] Syntax for main commands
 - [X] Syntax for eval and stats commands
 - [X] Description for commands
 - [X] Related main commands

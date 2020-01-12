@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 		scheme: 'file',
 		language: 'splunk'
 	};
-	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table2');
+	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table3');
 	const evalFunctions = returnCompletionItemfromJSON(context, 'eval_functions-syntax_description_type');
 	const statsFunctions = returnCompletionItemfromJSON(context, 'stats_functions-syntax_description_type');
 

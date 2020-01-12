@@ -24,28 +24,55 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
     const syntax = "Supported functions and syntax";
     const related = "Related commands";
     const functionType = "Type of function";
+    const params = "Parameters";
     const completionArray = [];
     
     for (const entry of fileJson) {
         const splunkCompletionItem = new vscode.CompletionItem(entry[name]);
-        splunkCompletionItem.kind = vscode.CompletionItemKind.Class;
+        splunkCompletionItem.kind = vscode.CompletionItemKind.Keyword;
         splunkCompletionItem.commitCharacters = ['\t'];
 
         let hasSyntax: boolean = false;
+        let hasParams: boolean = false;
         let hasType: boolean = false;
         let hasRelated: boolean = false;
         if (functionType in entry) { hasType = true; }
         if (syntax in entry) { hasSyntax = true; }
         if (related in entry) { hasRelated = true; }
+        if (params in entry) {hasParams = true; }
 
         let detail: string = "";
         let documentation = entry[description];
-        if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + "\n##### Related Commands:\n" + entry[related]); }
-        if ( hasType ) { detail = detail + '(' + entry[functionType] + ') '; }
-        if ( hasSyntax ) {
-            detail = detail + entry[syntax];
+        let docString: string = "";
+
+         if ( hasParams ) {
+            splunkCompletionItem.kind = vscode.CompletionItemKind.Class;
+            const requiredParams = entry['Parameters']['Required'];
+            const optionalParams = entry['Parameters']['Optional'];
+
+            if (requiredParams) {
+                docString = docString + "\n#### Required Arguments:";
+                // Loop through params and create docstring
+                for (const i in requiredParams) {
+                    docString = docString + "\n_@param_ `" + i + "` -- " + requiredParams[i] + "\n";
+                }
+            }
+
+            if (optionalParams) {
+                docString = docString + "\n#### Optional Arguments: \n";
+                // Loop through params and create docstring
+                for (const i in optionalParams) {
+                    docString = docString + "\n_@param_ `" + i + "` -- " + optionalParams[i] + "\n";
+                }
+            }
+        }
+
+        if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + docString + "\n##### Related Commands:\n" + entry[related]); }
+        if ( hasType ) { 
+            detail = detail + '(' + entry[functionType] + ') ';
             splunkCompletionItem.kind = vscode.CompletionItemKind.Method;
         }
+        if ( hasSyntax ) { detail = detail + entry[syntax]; }
         else { detail = entry[name]; }
         
         //console.log(detail);

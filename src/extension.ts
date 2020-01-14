@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
 	let splunkProvider = vscode.languages.registerCompletionItemProvider(splunkSelector, {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 			console.log("Providing base completion items");
-			return mainFunctions.concat(evalFunctions, statsFunctions);
+			return mainFunctions.concat(evalFunctions, statsFunctions, operators);
 		}
 	});
 
@@ -72,7 +72,7 @@ export function activate(context: vscode.ExtensionContext) {
 		splunkSelector,
 		{
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-				console.log("Providing stats completion items");
+				console.log("Providing main completion items");
 				let regexp = new RegExp('\\\\|[\\s]*');
 				let linePrefix = document.lineAt(position).text.substr(0, position.character);
 
@@ -85,13 +85,13 @@ export function activate(context: vscode.ExtensionContext) {
 		' ', '|'
 	);
 
-	// Here we try and suggest new commands after stats commands
+	// Here we try and suggest operators after stats functions
 	let operatorSplunkProvider = vscode.languages.registerCompletionItemProvider(
 		splunkSelector,
 		{
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-				console.log("Providing stats completion items");
-				let regexp = new RegExp('(avg[\\s\\(]+()?|count\\s|distinct_count\\s|estdc\\s|estdc_error\\s|max\\s|mean\\s|median\\s|min\\s|mode\\s|percentile\\s|range\\s|stdev\\s|stdevp\\s|sum\\s|sumsq\\s|var\\s|varp\\s|first\\s|last\\s|list\\s|values\\s|earliest\\s|earliest_time\\s|latest\\s|latest_time\\s|per_day\\s|per_hour\\s|per_minute\\s|per_second\\s|rate\\s)');
+				console.log("Providing operator completion items");
+				let regexp = new RegExp('(avg\\s|count\\s|distinct_count\\s|estdc\\s|estdc_error\\s|max\\s|mean\\s|median\\s|min\\s|mode\\s|percentile\\s|range\\s|stdev\\s|stdevp\\s|sum\\s|sumsq\\s|var\\s|varp\\s|first\\s|last\\s|list\\s|values\\s|earliest\\s|earliest_time\\s|latest\\s|latest_time\\s|per_day\\s|per_hour\\s|per_minute\\s|per_second\\s|rate\\s)');
 				let linePrefix = document.lineAt(position).text.substr(0, position.character);
 
 				if (!(linePrefix.match(regexp))) {

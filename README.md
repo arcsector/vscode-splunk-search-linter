@@ -17,5 +17,6 @@ This is the README for the Splunk Search Linter.
 - [X] Related main commands
 - [X] Add in suggestion after pipe, stats, and eval commands for respective commands
 - [X] Add in suggestion after stats commands with arguments for keywords (AS, BY, OVER, WHERE, etc...)
-- [ ] Publish to VSCE Marketplace
+- [ ] Pull JSON files directly from Splunk's website so that manual updating is not required
+- [X] Publish to VSCE Marketplace
 - [ ] Bundle with syntax highlighter and conf file linter

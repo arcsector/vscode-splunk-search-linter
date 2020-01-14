@@ -1,8 +1,8 @@
 {
 	"name": "vscode-splunk-search-linter",
-	"displayName": "vscode-splunk-search-linter",
-	"description": "Splunk Search Linter",
-	"version": "0.0.1",
+	"displayName": "Splunk Search Linter",
+	"description": "Splunk Search suggestions for Splunk SPL Files",
+	"version": "0.1.1",
 	"publisher": "arcsector",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -24,7 +24,7 @@
 	},
 	"main": "./out/extension.js",
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
+		"vscode:prepublish": "tsc -p ./",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile",

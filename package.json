@@ -1,6 +1,6 @@
 {
 	"name": "vscode-splunk-search-linter",
-	"displayName": "Splunk Search Linter",
+	"displayName": "Splunk Search Autocompletion Tool",
 	"description": "Splunk Search suggestions for Splunk SPL Files",
 	"version": "0.1.1",
 	"publisher": "arcsector",
@@ -24,7 +24,7 @@
 	},
 	"main": "./out/src/extension.js",
 	"scripts": {
-		"vscode:prepublish": "tsc -p ./",
+		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile",

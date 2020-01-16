@@ -21,3 +21,9 @@ This is the README for the Splunk Search Linter.
 - [ ] Instead of JSON files, get info directly from Splunk's website so that manual updating is not required
 - [ ] Implement hovers for all commands to increase syntax and description visibility
 - [X] Publish to VSCE Marketplace
+
+```java
+import java.util.*
+
+System.out.printline()
+```

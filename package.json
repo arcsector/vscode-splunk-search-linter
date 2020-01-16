@@ -8,7 +8,7 @@
 		"vscode": "^1.41.0"
 	},
 	"categories": [
-		"Other"
+		"Programming Languages"
 	],
 	"activationEvents": [
 		"onLanguage:splunk"
@@ -22,7 +22,7 @@
 		"color": "#1e1e1e",
 		"theme": "dark"
 	},
-	"main": "./out/extension.js",
+	"main": "./out/src/extension.js",
 	"scripts": {
 		"vscode:prepublish": "tsc -p ./",
 		"compile": "tsc -p ./",

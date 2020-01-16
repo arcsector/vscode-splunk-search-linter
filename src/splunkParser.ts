@@ -26,6 +26,8 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
     const functionType = "Type of function";
     const params = "Parameters";
     const completionArray = [];
+    //const hoverArray = [];
+    const hoverDict: any = {};
     
     for (const entry of fileJson) {
         const splunkCompletionItem = new vscode.CompletionItem(entry[name]);
@@ -66,8 +68,8 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
                 }
             }
         }
-
-        if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + docString + "\n##### Related Commands:\n" + entry[related]); }
+        let hoverDocs;
+        if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + docString + "\n##### Related Commands:\n" + entry[related]); hoverDocs = documentation + docString + "\n##### Related Commands:\n" + entry[related]; }
         if ( hasType ) { 
             detail = detail + '(' + entry[functionType] + ') ';
             splunkCompletionItem.kind = vscode.CompletionItemKind.Method;
@@ -75,12 +77,22 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
         if ( hasSyntax ) { detail = detail + entry[syntax]; }
         else { detail = entry[name]; }
         
+        if ( entry[functionType] === "Keyword" ) { splunkCompletionItem.kind = vscode.CompletionItemKind.Keyword; }
+
         //console.log(detail);
         //console.log(documentation);
 
         splunkCompletionItem.detail = detail;
         splunkCompletionItem.documentation = documentation;
+
+        let splunkHoverItem = new vscode.Hover(entry[name]);
+        splunkHoverItem.contents = [new vscode.MarkdownString(detail), documentation];
         completionArray.push(splunkCompletionItem);
+        //hoverArray.push(splunkHoverItem);
+        hoverDict[entry[name]] = splunkHoverItem;
     }
-    return completionArray;
+    return {
+        "completion": completionArray,
+        "hover": hoverDict
+    };
 }

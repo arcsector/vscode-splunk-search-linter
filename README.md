@@ -1,5 +1,7 @@
 # Splunk Search Autocompletion Tool README
 
+<img src="https://img.shields.io/badge/Downloads-40%2B-green">
+
 This is the README for the Splunk Search Autocompletion Tool.
 
 ## Features

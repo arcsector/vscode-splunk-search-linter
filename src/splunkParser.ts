@@ -25,6 +25,7 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
     const related = "Related commands";
     const functionType = "Type of function";
     const params = "Parameters";
+    const re = /\s/g;
     const completionArray = [];
     //const hoverArray = [];
     const hoverDict: any = {};
@@ -71,7 +72,7 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
         let hoverDocs;
         if ( hasRelated ) { documentation = new vscode.MarkdownString(documentation + docString + "\n##### Related Commands:\n" + entry[related]); hoverDocs = documentation + docString + "\n##### Related Commands:\n" + entry[related]; }
         if ( hasType ) { 
-            detail = detail + '(' + entry[functionType] + ') ';
+            detail = detail + '(' + entry[functionType].toLowerCase().replace(re, "_") + ') ';
             splunkCompletionItem.kind = vscode.CompletionItemKind.Method;
         }
         if ( hasSyntax ) { detail = detail + entry[syntax]; }

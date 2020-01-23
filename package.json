@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage:splunk"
+		"onLanguage:splunk_search"
 	],
 	"repository": {
 		"type": "git",

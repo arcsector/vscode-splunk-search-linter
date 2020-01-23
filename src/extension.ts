@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Define document selector
 	let splunkSelector:vscode.DocumentSelector = {
 		scheme: 'file',
-		language: 'splunk'
+		language: 'splunk_search'
 	};
 	const mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table');
 	const evalFunctions = returnCompletionItemfromJSON(context, 'eval_functions-syntax_description_type');

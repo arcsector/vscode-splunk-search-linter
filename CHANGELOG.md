@@ -7,6 +7,6 @@ All notable changes to the "vscode-splunk-search-linter" extension will be docum
 ## [1.0.0] - 2020-01-09
 ### Added
 - Autocompleting commands
-- Syntax for eval and stats commands
+- Syntax for main, eval, and stats commands
 - Description for commands
 - Related main commands

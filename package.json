@@ -1,13 +1,14 @@
 {
 	"name": "vscode-splunk-search-linter",
-	"displayName": "vscode-splunk-search-linter",
-	"description": "Splunk Search Linter",
-	"version": "0.2.0",
+	"displayName": "Splunk Search Autocompletion Tool",
+	"description": "Splunk Search suggestions for Splunk SPL Files",
+	"version": "0.1.2",
+	"publisher": "arcsector",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
 	"categories": [
-		"Other"
+		"Programming Languages"
 	],
 	"activationEvents": [
 		"onLanguage:splunk_search"
@@ -21,7 +22,7 @@
 		"color": "#1e1e1e",
 		"theme": "dark"
 	},
-	"main": "./out/extension.js",
+	"main": "./out/src/extension.js",
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",

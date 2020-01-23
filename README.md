@@ -1,21 +1,40 @@
-# vscode-splunk-search-linter README
+# Splunk Search Autocompletion Tool README
 
-This is the README for your extension "vscode-splunk-search-linter". After writing up a brief description, we recommend including the following sections.
+<img src="https://img.shields.io/badge/Downloads-40%2B-green">
+
+This is the README for the Splunk Search Autocompletion Tool.
 
 ## Features
 
+- Works on `.spl` and `.splunk` files
 - Autocompleting commands
-- Syntax for eval and stats commands
+- Syntax for main, eval, and stats commands
+- Hover for commands and keywords
 - Description for commands
 - Related main commands
 
+<img src="https://raw.githubusercontent.com/arcsector/vscode-splunk-search-linter/master/.github/vscode_splunk_suggestion-main.png">
+
+<img src="https://raw.githubusercontent.com/arcsector/vscode-splunk-search-linter/master/.github/vscode_splunk_suggestion-eval.png">
+
+## How to install
+
+### Install from Source
+
+Install from source by downloading this repo and unzipping into your vscode extensions directory (ususally `~/.vscode/extensions`)
+
+### Install in Visual Studio Code directly
+
+Install directly in visual studio by going to the extensions tab and searching for `"splunk search"`. The quotes are imperative as the words are normally not treated as a phrase. Click the `Install` button on the  extension with the same name as this README and you're good to go.
+
 ## TODO
 
-- [ ] Syntax for main commands
+- [X] Syntax for main commands
 - [X] Syntax for eval and stats commands
 - [X] Description for commands
 - [X] Related main commands
 - [X] Add in suggestion after pipe, stats, and eval commands for respective commands
-- [ ] Add in suggestion after stats commands with arguments for keywords (AS, BY, OVER, WHERE, etc...)
-- [ ] Publish to VSCE Marketplace
-- [ ] Bundle with syntax highlighter and conf file linter
+- [X] Add in suggestion after stats commands with arguments for keywords (AS, BY, OVER, WHERE, etc...)
+- [ ] Instead of JSON files, get info directly from Splunk's website so that manual updating is not required
+- [X] Implement hovers for all commands to increase syntax and description visibility
+- [X] Publish to VSCE Marketplace

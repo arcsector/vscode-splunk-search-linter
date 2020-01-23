@@ -2,7 +2,7 @@
 	"name": "vscode-splunk-search-linter",
 	"displayName": "Splunk Search Autocompletion Tool",
 	"description": "Splunk Search suggestions for Splunk SPL Files",
-	"version": "0.1.3",
+	"version": "0.3.0",
 	"publisher": "arcsector",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -11,7 +11,7 @@
 		"Programming Languages"
 	],
 	"activationEvents": [
-		"onLanguage:splunk"
+		"onLanguage:splunk_search"
 	],
 	"repository": {
 		"type": "git",

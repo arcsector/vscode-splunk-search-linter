@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Define document selector
 	let splunkSelector:vscode.DocumentSelector = {
 		scheme: 'file',
-		language: 'splunk'
+		language: 'splunk_search'
 	};
 	let mainFunctions = returnCompletionItemfromJSON(context, 'Command_description_Related_table3');
 	const mainHovers = mainFunctions['hover'];

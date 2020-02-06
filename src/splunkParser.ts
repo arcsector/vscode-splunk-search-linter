@@ -97,3 +97,98 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
         "hover": hoverDict
     };
 }
+
+export function returnCommandRegister(context: vscode.ExtensionContext) {
+    const splunkCommandHandler = vscode.commands.registerCommand('splunk_search.Prettify', function() {
+        let editor = vscode.window.activeTextEditor;
+        if (editor) {
+            console.log("editor is active");
+            let document = editor.document;
+            
+            let docText: string = document.getText();
+            let docTextCopy: string = docText;
+
+            // define new vars:
+            // keep track of position in string
+            let i: number = 0; 
+
+            // keep track of whether or not we're in a bracket
+            let inBaseBracket: boolean = false;
+
+            // keep track of what level we're at in brackets
+            let bracketLevel = 0;
+            for (const character of docTextCopy) {
+                if (i === 0) { i++; continue; }
+                if (inBaseBracket) {
+                    if (character === '|') {
+                        inBaseBracket = false;
+                        i++;
+                        continue;
+                    }
+                    else if (character === ' ') {
+                        i++;
+                        continue;
+                    }
+                    else {
+                        inBaseBracket = false;
+                        i++;
+                        continue;
+                    }
+                }
+                else if (character === "[") {
+                    console.log("open bracket found");
+                    let lengthToIncrease: number = 2;
+                    let insertString: string = '\n';
+                    
+                    // insert string increases indent per bracketLevel
+                    bracketLevel++;
+                    for (var x = 0; x < bracketLevel; x++) { insertString = insertString + '  '; lengthToIncrease += 2; }
+                    docText = docText.slice(0, i) + insertString + docText.slice(i);
+                    inBaseBracket = true;
+                    i += lengthToIncrease;
+                }
+                else if (character === "]") {
+                    console.log("close bracket found");
+                    let lengthToIncrease: number = 2;
+                    let insertString: string = '\n';
+                    
+                    // make sure bracketLevel is decreased before adding in \t
+                    bracketLevel--;
+                    for (var x = 0; x < bracketLevel; x++) { insertString = insertString + '  '; lengthToIncrease += 2; }
+                    docText = docText.slice(0, i + 1) + insertString + docText.slice(i + 1);
+                    i += lengthToIncrease;
+                }
+                else if (character === '|') {
+                    console.log("Pipe found");
+                    console.log(docText[i-1]);
+                    if (docText[i] === "\n" || docText[i - 1] === "\n" || docText[i - 2] === "\n") {
+                        i++;
+                        continue;
+                    }
+                    let lengthToIncrease: number = 2;
+                    let insertString: string = '\n';
+                    
+                    // insert string increases indent per bracketLevel
+                    for (var x = 0; x < bracketLevel; x++) { insertString = insertString + '  '; lengthToIncrease += 2; }
+                    docText = docText.slice(0, i) + insertString + docText.slice(i);
+                    i += lengthToIncrease;
+                }
+                else {
+                    i++;
+                }
+            }
+            console.log(docText);
+            editor.edit(editBuilder => {
+                let numLines: number = document.lineCount;
+                console.log(numLines);
+                let range: vscode.Range = new vscode.Range(0, 0, numLines, document.lineAt(numLines - 1).text.length);
+                console.log(range);
+                console.log(range.start, range.end);
+                editBuilder.replace(range, docText);
+                console.log("replaced");
+            });
+        }
+    });
+
+    return splunkCommandHandler;
+}

@@ -22,6 +22,14 @@
 		"color": "#1e1e1e",
 		"theme": "dark"
 	},
+	"contributes": {
+		"commands" : [
+			{
+				"command": "splunk_search.Prettify",
+				"title": "Prettify SPL"
+			}
+		]
+	},
 	"main": "./out/src/extension.js",
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

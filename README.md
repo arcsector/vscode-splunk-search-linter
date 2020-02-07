@@ -24,7 +24,7 @@ This is the README for the Splunk Search Autocompletion Tool.
 
 ### Prerequisites
 
-**In order to install this extension you must have installed the [Splunk Search Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=arcsector.vscode-splunk-search-syntax). Please install it first before submitting an issue.**
+**In order to install this extension you must have installed the [Splunk Search Syntax Highlighter](https://marketplace.visualstudio.com/items?itemName=arcsector.vscode-splunk-search-syntax). This will be installed for you.**
 
 ### Install from Source
 
@@ -45,4 +45,5 @@ Install directly in visual studio by going to the extensions tab and searching f
 - [ ] Instead of JSON files, get info directly from Splunk's website so that manual updating is not required
 - [X] Implement hovers for all commands to increase syntax and description visibility
 - [X] Publish to VSCE Marketplace
-- [ ] Bundle with Syntax highlighter
+- [X] Bundle with Syntax highlighter
+- [X] Add prettifier

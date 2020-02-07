@@ -18,6 +18,8 @@ This is the README for the Splunk Search Autocompletion Tool.
 
 <img src="https://raw.githubusercontent.com/arcsector/vscode-splunk-search-linter/master/.github/vscode_splunk_suggestion-eval.png">
 
+<img src="https://raw.githubusercontent.com/arcsector/vscode-splunk-search-linter/master/.github/vscode_splunk_command-format_spl.png">
+
 ## How to install
 
 ### Prerequisites

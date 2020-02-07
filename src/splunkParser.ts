@@ -148,6 +148,9 @@ export function returnCommandRegister(context: vscode.ExtensionContext) {
             // keep track of whether or not we're going to skip a pipe
             let inBaseBracket: boolean = false;
 
+            // keep track of wheter or not we're in a quote
+            let inQuote: boolean = false;
+
             // keep track of what level we're at in brackets
             let bracketLevel = 0;
 
@@ -170,8 +173,30 @@ export function returnCommandRegister(context: vscode.ExtensionContext) {
                         continue;
                     }
                 }
+                else if (character === "\"") {
+                    // if quote is escaped, it doesn't matter
+                    if (docText[i-1] === "\\") {
+                        i++;
+                        continue;
+                    }
+                    if (inQuote) {
+                        inQuote = false;
+                        i++;
+                        continue;
+                    }
+                    else {
+                        inQuote = true;
+                        i++;
+                        continue;
+                    }
+                }
                 else if (character === "[") {
                     console.log("open bracket found");
+                    if (docText[i-1] === "\\" || inQuote) {
+                        console.log("we're either escaping or in a quote");
+                        i++;
+                        continue;
+                    }
                     if (testNewline(docText, i-1)) {
                         console.log("found newline with function");
                         i++;
@@ -189,6 +214,11 @@ export function returnCommandRegister(context: vscode.ExtensionContext) {
                 }
                 else if (character === "]") {
                     console.log("close bracket found");
+                    if (docText[i-1] === "\\" || inQuote) {
+                        console.log("we're either escaping or in a quote");
+                        i++;
+                        continue;
+                    }
                     let lengthToIncrease: number = 1;
                     
                     let insertString: string = '';
@@ -200,7 +230,11 @@ export function returnCommandRegister(context: vscode.ExtensionContext) {
                 }
                 else if (character === '|') {
                     console.log("Pipe found");
-                    
+                    if (docText[i-1] === "\\" || inQuote) {
+                        console.log("we're either escaping or in a quote");
+                        i++;
+                        continue;
+                    }
                     if (testNewline(docText, i-1)) {
                         console.log("found newline with function");
                         i++;

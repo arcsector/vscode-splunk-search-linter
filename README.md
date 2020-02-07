@@ -12,6 +12,7 @@ This is the README for the Splunk Search Autocompletion Tool.
 - Hover for commands and keywords
 - Description for commands
 - Related main commands
+- `Format SPL` VSCode command to format searches
 
 <img src="https://raw.githubusercontent.com/arcsector/vscode-splunk-search-linter/master/.github/vscode_splunk_suggestion-main.png">
 

@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { returnCompletionItemfromJSON } from './splunkParser';
+import { returnCompletionItemfromJSON, returnCommandRegister } from './splunkParser';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -114,6 +114,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// ====================== /COMPLETION ITEMS ====================== //
 
 	console.log("Providing hover items");
+
 	// ========================= HOVER ITEMS ========================= //
 	let splunkHoverProvider = vscode.languages.registerHoverProvider(splunkSelector, {
 		provideHover(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
@@ -127,13 +128,21 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 	
+	// ======================== /HOVER ITEMS ======================== //
+	
+	console.log("Providing commands");
+	// ======================= COMMAND ITEMS ======================== //
+	
+	let splunkCommandProvider = returnCommandRegister(context);
+
 	context.subscriptions.push(
 		splunkProvider, 
 		evalSplunkProvider, 
 		statsSplunkProvider, 
 		pipeSplunkProvider, 
 		operatorSplunkProvider, 
-		splunkHoverProvider
+		splunkHoverProvider,
+		splunkCommandProvider
 	);
 }
 

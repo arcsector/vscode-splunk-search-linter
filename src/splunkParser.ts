@@ -12,7 +12,8 @@ export function returnCompletionItemfromJSON(context: vscode.ExtensionContext, f
     file = fs.readFileSync(completeFilePath, 'utf-8');
     try {
         file = fs.readFileSync(completeFilePath, 'utf-8');
-    } catch(e) {
+    } catch(err) {
+        const e = err as Error;
         console.log("Error: ", e.stack);
     }
 
@@ -224,7 +225,7 @@ export function returnCommandRegister(context: vscode.ExtensionContext) {
                     let insertString: string = '';
                     // make sure bracketLevel is decreased before adding in \t
                     bracketLevel--;
-                    for (var x = 0; x < bracketLevel; x++) { insertString = insertString + '  '; lengthToIncrease += 2; }
+                    for (var y = 0; y < bracketLevel; y++) { insertString = insertString + '  '; lengthToIncrease += 2; }
                     docText = docText.slice(0, i + 1) + insertString + docText.slice(i + 1);
                     i += lengthToIncrease;
                 }
@@ -249,7 +250,7 @@ export function returnCommandRegister(context: vscode.ExtensionContext) {
                     let insertString: string = '\n';
                     
                     // insert string increases indent per bracketLevel
-                    for (var x = 0; x < bracketLevel; x++) { insertString = insertString + '  '; lengthToIncrease += 2; }
+                    for (var z = 0; z < bracketLevel; z++) { insertString = insertString + '  '; lengthToIncrease += 2; }
                     docText = docText.slice(0, i) + insertString + docText.slice(i);
                     i += lengthToIncrease;
                 }

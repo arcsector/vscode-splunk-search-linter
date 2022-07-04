@@ -2,7 +2,7 @@
 	"name": "vscode-splunk-search-linter",
 	"displayName": "Splunk Search Autocompletion Tool",
 	"description": "Splunk Search suggestions for Splunk SPL Files",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"publisher": "arcsector",
 	"engines": {
 		"vscode": "^1.41.0"
